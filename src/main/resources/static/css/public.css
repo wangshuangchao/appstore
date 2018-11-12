@@ -1,0 +1,86 @@
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, form, input, textarea, th, td, select {
+    margin: 0;
+    padding: 0;
+}
+*{box-sizing: border-box;}
+html, body {
+    min-height: 100%;
+}
+body {
+    font-family: "Microsoft YaHei";
+    font-size:14px;
+    color:#333;
+}
+h1,h5{font-weight:normal;}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: #232323;
+}
+.content{
+    width:100%;
+    text-align: center;
+}
+.content .header{
+    width:100%;
+}
+.content .header img{
+    width:100%;
+}
+.content .body{
+    width:100%;
+}
+.content .body .bodyOn{
+    width:100%;
+}
+.content .body .bodyOn .logo{
+    width:100px;
+    height:100px;
+}
+.content .body .bodyOn .ole{
+    margin-top:15px;
+    color:darkcyan;
+}
+.content .body .bodyOn .introduce{
+    margin-top:60px;
+}
+.content .body .bodyOn .introduce p{
+    margin-top:12px;
+    font-size: 12px;
+    color:#333;
+}
+.content .body .bodyOn .ios,.content .body .bodyOn .android{
+    margin-top:40px;
+    width:160px;
+    height:40px;
+}
+.content .body .bodyUnder{
+    width:100%;
+    background: #f9f9f9;
+    margin-top:90px;
+}
+.content .body .bodyUnder h1{
+    display: inline-block;
+    margin-top:50px;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+.content .body .bodyUnder p{
+    font-size: 6px;
+    margin-top:4px;
+}
+.content .body .bodyUnder .phone{
+
+    margin-top:40px;
+}
+.content .footer{
+    width:100%;
+}
+.content .footer img{
+    width:100%;
+}

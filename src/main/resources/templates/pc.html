@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/public.css">
+    <style>
+        .phone {
+            width: 500px;
+            height: 300px;
+        }
+
+        .ios, .android {
+            cursor: pointer;
+            margin: 0 20px;
+        }
+
+        .mask {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .2);
+        }
+
+        .maskCode {
+            position: absolute;
+            width: 230px;
+            height: 260px;
+            left: 50%;
+            top: 50%;
+            margin: -130px 0 0 -115px;
+            border-radius: 20px;
+        }
+
+        .code {
+            width: 230px;
+            height: 160px;
+            background: -webkit-linear-gradient(left, #4bacff, #4cc6ff);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .cancel {
+            cursor: pointer;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 10px;
+            right: 10px;
+        }
+
+        .mask .maskCode .code .cancel img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .mask .maskCode .code .img {
+            display: none;
+            width: 90px;
+            height: 90px;
+            margin-top: 25px;
+        }
+
+        .load {
+            margin-top: 10px;
+            color: #fff;
+            line-height: 20px;
+        }
+
+        .mask .maskCode .code .load img {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .mask .maskCode .code .load span {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 12px;
+        }
+
+        .sweep {
+            width: 230px;
+            line-height: 50px;
+            background-color: white;
+            border-radius: 0 0 20px 20px;
+            font-size: 12px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="mask" id="mask">
+        <div class="maskCode">
+            <div class="code">
+                <div class="cancel">
+                    <img  id="cancel" src="./img/delete.png" alt="">
+                    <img src="" alt="">
+                </div>
+                <img id="show_ios" class="img" src="./img/ios_qrcode.png" alt="">
+                <img id="show_android" class="img" src="./img/android_qrcode.png" alt="">
+                <div class="load">
+                    <img src="./img/code.png" alt="">
+                    <span id="text"></span>
+                </div>
+            </div>
+            <div class="sweep">
+                扫一扫二维码下载【哦了】APP
+            </div>
+        </div>
+    </div>
+    <div class="header"><img src="./img/header-pc.png" alt=""></div>
+    <div class="body">
+        <div class="bodyOn">
+            <img class="logo" src="./img/logo-pc.png" alt="">
+            <p class="ole">哦了</p>
+            <div class="introduce">
+                <p>【哦了】是一款实用性国际聊天软件，支持多国聊天，支持无限添加好友功能,</p>
+                <p>强大的数据存储，闪电运行，让沟通不在有国界，让业务不在受限制。</p>
+                <p>同时具有在浏览器打在功能，具备你综合熊社交功能。</p>
+            </div>
+            <img id="ios" class="ios" src="./img/ios-pc.png" alt="">
+            <img id="android" class="ios android" src="./img/android-pc.png" alt="">
+        </div>
+        <div class="bodyUnder">
+            <h1>
+                <span>应用</span><span>展示</span>
+            </h1>
+            <p>
+                APPLICATION DISPLAY
+            </p>
+            <img class="phone" src="./img/phone-pc.png" alt="">
+        </div>
+    </div>
+    <div class="footer"><img src="./img/footer-pc.png" alt=""></div>
+</div>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+    $(".ios").click(function (e) {
+        $("#mask").show();
+        if($(e.target).attr("id")==="ios"){
+            $("#show_ios").show();
+            $("#show_android").hide();
+            $("#text").html("IOS下载")
+        }
+        if($(e.target).attr("id")==="android"){
+            $("#show_ios").hide();
+            $("#show_android").show();
+            $("#text").html("Android下载")
+        }
+    });
+    $("#cancel").click(function () {
+        $("#mask").hide();
+    })
+</script>

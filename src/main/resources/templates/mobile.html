@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="./css/public.css">
+    <style>
+        .phone{
+            width:320px;
+            height:200px;
+        }
+        .footer{
+            background: #f9f9f9;
+        }
+        .footer img{
+            margin-top:60px;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="header"><img src="./img/header.png" alt=""></div>
+    <div class="body">
+        <div class="bodyOn">
+            <img class="logo" src="./img/logo.png" alt="">
+            <p class="ole">哦了</p>
+            <div class="introduce">
+                <p>【哦了】是一款实用性国际聊天软件</p>
+                <p>支持多国聊天，支持无限添加好友功能,</p>
+                <p>强大的数据存储，闪电运行</p>
+                <p>让沟通不在有国界，让业务不在受限制。</p>
+                <p>同时具有在浏览器打在功能，具备你综合熊社交功能。</p>
+            </div>
+            <!--<p th:text="${iosUrl}">123</p>
+            <p th:text="${androidUrl}">456</p>-->
+            <a href="###" th:href="${iosUrl}"><img class="ios" src="./img/ios.png" alt=""></a>
+            <a href="###" th:href="${androidUrl}"><img class="ios android" src="./img/android.png" alt=""></a>
+        </div>
+        <div class="bodyUnder">
+            <h1>
+                <span>应用</span><span>展示</span>
+            </h1>
+            <p>
+                APPLICATION DISPLAY
+            </p>
+            <img class="phone" src="./img/phone.png" alt="">
+        </div>
+    </div>
+    <div class="footer">
+        <img src="./img/footer.png" alt="">
+    </div>
+</div>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+
+</script>

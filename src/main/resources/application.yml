@@ -1,0 +1,49 @@
+spring:
+  thymeleaf:
+    mode: HTML
+
+
+
+mugua:
+  appDownload:
+    android:
+      downloadUrlPrefix:
+        "http://192.168.1.92:8080/apk/"
+      savePath:
+        "D:/Users/28695/IdeaProjects/Up_down/android/"
+      fileFilterType:
+        ".exe"
+    ios:
+      #是否直接到苹果的APP store 下载,如果为true,则appStoreUrl配置项生效
+      downloadFromAppStore: true
+      appStoreUrl:
+        "itms-services://?action=download-manifest&url=https://127.0.0.1:8080/ipa/20180715-010.plist"
+      #ipa包下载路径的前缀
+      downloadUrlPrefix:
+        "https://127.0.0.1:8080/ipa/"
+      savePath:
+        "D:/Users/28695/IdeaProjects/Up_down/ios/"
+      fileFilterType:
+        ".plist"
+      plist:
+        display-image:
+          "https://file.91ole.com/ipa/57.png"
+        full-size-image:
+          "https://file.91ole.com/ipa/512.png"
+        metadata:
+          bundle-identifier:
+            "com.luosi.letschat"
+          bundle-version:
+            "5.6.6"
+          kind:
+            software
+          title:
+            哦了
+
+#日志
+logging:
+  level:
+    com:
+      mugua:
+        up_down: debug
+  file: ./logs/core.log
